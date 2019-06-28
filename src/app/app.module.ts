@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { ListPage } from '../pages/list/list.component';
@@ -28,7 +29,8 @@ import { LoaderService } from '../services/app/loader.service'
     BrowserModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
