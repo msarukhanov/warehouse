@@ -6,13 +6,14 @@ import {StorageConstant} from '../../constants/storage.constant';
 import {Item} from '../../interfaces/item.interface';
 import {LoaderService} from '../app/loader.service';
 
-import * as Products from '../../mock/products.json';
+import {Http} from '@angular/http';
 
 @Injectable()
 export class ApiService {
 
   constructor(private storage: Storage,
-              private loaderService: LoaderService) {
+              private loaderService: LoaderService,
+              private http: Http) {
     this.getLocalData();
   }
 
@@ -132,13 +133,17 @@ export class ApiService {
   }
 
   private getLocalData(): Observable<any> {
-    return Observable.fromPromise(this.storage.get(StorageConstant.WareHouseList).then(products => {
-      if (!products || !products.length) {
-        this.storage.set(StorageConstant.WareHouseList, Products);
-        products = Products;
-      }
-      return products;
-    }));
+    return Observable.fromPromise(
+      this.storage.get(StorageConstant.WareHouseList).then((productsStorage: Array<Item>) => {
+        return this.http.get('assets/products.json').map(res => res.json()).toPromise().then((productsDefault: Array<Item>) => {
+          if (!productsStorage || !productsStorage.length) {
+            this.storage.set(StorageConstant.WareHouseList, productsDefault);
+            productsStorage = productsDefault;
+          }
+          return productsStorage;
+        });
+      })
+    );
   }
 
 }

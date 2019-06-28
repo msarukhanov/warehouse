@@ -1,0 +1,38 @@
+[
+  {
+    "code" : "AWFV 23456",
+    "quantity" : 10,
+    "floor" : 1,
+    "section" : 3
+  },
+  {
+    "code" : "FGB 456576",
+    "quantity" : 40,
+    "floor" : 5,
+    "section" : 1
+  },
+  {
+    "code" : "SS 5677",
+    "quantity" : 3,
+    "floor" : 4,
+    "section" : 2
+  },
+  {
+    "code" : "RFV 5077",
+    "quantity" : 12,
+    "floor" : 1,
+    "section" : 2
+  },
+  {
+    "code" : "FETD 567889",
+    "quantity" : 30,
+    "floor" : 3,
+    "section" : 2
+  },
+  {
+    "code" : "ASD 3455",
+    "quantity" : 0,
+    "floor" : 1,
+    "section" : 7
+  }
+]
