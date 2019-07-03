@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+
+ion-toolbar .toolbar-background {
+  border-color: #b2b2b2;
+  background: #f7ca55;
+}
+ion-toolbar ion-icon, ion-toolbar .toolbar-title {
+  color: white;
+}
+
+.wh-card {
+  background: #f6f6f6;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  z-index: 9999;
+  margin: 5px 0 5px 0;
+}
+.wh-card-item-name {
+  font-size: 20px;
+  color: #535353;
+  font-weight: 900;
+  margin: 10px 0;
+  text-align: left;
+  padding: 0 0 0 10px;
+  width: 100%;
+  position: relative;
+}
+.wh-card-item-name div {
+  display: inline-block;
+}
+.wh-card-item-name button {
+  background-color: #f7ca55;
+  margin: 0 0 10px 10px;
+  bottom: -5px;
+  right: 0;
+  font-size: 12px;
+  line-height: 20px;
+  box-shadow: none;
+  text-transform: capitalize;
+  border-radius: 6px;
+  position: absolute;
+}
+.wh-card-item-name button ion-icon {
+  margin-right: 5px;
+}
+.wh-card-item-stats {
+  color: #535353;
+  font-weight: 700;
+}
+.wh-card-item-stats .wh-card-button {
+  width: 33%;
+  float: left;
+  padding: 5px 15px;
+}
+.wh-card-item-stats sup {
+  position: absolute;
+  bottom: 4px;
+  font-size: 45%;
+  margin-left: 2px;
+}
+.wh-card-item-stats .stat {
+  position: relative;
+  font-size: 16px;
+}
+.wh-card-item-stats .stat button {
+  background: none;
+}
+.wh-card-item-stats .stat-value {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.wh-card-item-stats .no-border {
+  border-right: none;
+}
+.wh-card-item-stats:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+
+.editForm {
+  margin-top: 20px;
+  padding: 10px;
+}
+.editForm ion-item {
+  padding-right: 16px;
+}
+.editForm .form-error-msg {
+  color: red;
+}
+.editForm button {
+  margin-top: 20px;
+}
+.editForm .del-btn {
+  background-color: red;
+}
+.editForm .save-btn {
+  background-color: rgb(247,202,85);
+}
+
+.clear-btn {
+  background-color: #FFF;
+  box-shadow: none;
+  color: rgb(247,202,85);
+}

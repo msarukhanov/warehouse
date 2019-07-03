@@ -46,8 +46,15 @@
         <ion-row *ngFor="let item of items">
           <ion-col size-md>
             <div class="wh-card">
+              <!--<div class="wh-card-item-name">-->
+                <!---->
+              <!--</div>-->
               <div class="wh-card-item-name">
                 {{item.code}}
+                <button ion-button right (click)="editItem(item)">
+                  <ion-icon name='create' color="white"></ion-icon>
+                  Edit
+                </button>
               </div>
               <div class="wh-card-item-stats">
                 <div class="wh-card-button">
@@ -62,12 +69,6 @@
                   <div class="stat-value">Section</div>
                   <div class="stat">{{item.section}}</div>
                 </div>
-              </div>
-              <div class="wh-card-item-name">
-                <button ion-button right (click)="editItem(item)">
-                  <ion-icon name='create' color="white"></ion-icon>
-                  Edit
-                </button>
               </div>
             </div>
           </ion-col>
